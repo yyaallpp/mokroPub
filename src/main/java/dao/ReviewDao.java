@@ -297,7 +297,7 @@ public class ReviewDao {
       String sql =
             " SELECT c.name, r.picture, r.star, r.content, r.create_date "
             + " FROM review r "
-            + "   INNER JOIN `ORDER` o  "
+            + "   INNER JOIN `order` o  "
             + "   ON r.order_no = o.order_no "
             + "   INNER JOIN product p  "
             + "   ON o.product_no = p.product_no  "

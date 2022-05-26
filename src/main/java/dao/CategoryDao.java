@@ -21,7 +21,7 @@ public class CategoryDao {
 			PreparedStatement stmt = null;
 			ResultSet rs =null;
 			// category에서 category_no에 따른 type을 출력
-			String sql=" SELECT TYPE FROM category WHERE category_no = ? ";
+			String sql=" SELECT type FROM category WHERE category_no = ? ";
 		try {
 			conn = DBUtil.getConnection();
 			stmt = conn.prepareStatement(sql);
@@ -99,7 +99,7 @@ public class CategoryDao {
 		rs = stmt.executeQuery();
 		while(rs.next()) {
 			product = new Product();
-			product.setProductNo(rs.getInt("ProductNo"));
+			product.setProductNo(rs.getInt("productNo"));
 			product.setName(rs.getString("name"));
 			product.setPrice(rs.getInt("price"));
 			product.setVolume(rs.getInt("volume"));
